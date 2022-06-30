@@ -40,6 +40,7 @@ const HomeScreen = () => {
                     <div className="mt-[20px]">
                         <WalletMultiButton className="h-[45px] px-[40px] rounded-lg cursor-pointer text-[16px] font-bold text-white bg-gradient-to-r from-violet-500 to-fuchsia-500 max-w-[300px]" />
                     </div>   
+          
                 </header>
 
                 <main className="ml-[150px] mt-[55px]">

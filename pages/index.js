@@ -1,15 +1,18 @@
 import React, {useState, useEffect} from "react";
 import HeadComponent from '../components/Head';
-import Product from "../components/Product";
 import { useWallet } from '@solana/wallet-adapter-react';
 import HomeScreen from '../components/HomeScreen';
 import ProductScreen from "../components/ProductScreen";
+import CreateProduct from "../components/CreateProduct";
 
 
 const App = () => {
   // This will fetch the users' public key (wallet address) from any wallet we support
   const { publicKey } = useWallet();
   const [products, setProducts] = useState([]);
+
+  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const [creating, setCreating] = useState(false);
 
 
   useEffect(() => {
@@ -22,21 +25,18 @@ const App = () => {
         });
     }
   }, [publicKey]);
-
-
-  // const renderItemByContainer = () => (
-  //   <div className="products-container">
-  //     {products.map((product) => (
-  //       <Product key={product.id} product={product} />
-  //     ))}
-  //   </div>
-  // );
-  
   
   return (
     <div className="w-screen h-screen font-['Courier']">
       <HeadComponent/>
-      {publicKey? <ProductScreen products={products}/> : <HomeScreen/>}
+      {isOwner && (
+            <button className="create-product-button" onClick={() => setCreating(!creating)}>
+              {creating ? "Close" : "Create Product +"}
+            </button>
+          )}
+
+      {creating && <CreateProduct />}
+      {publicKey? <ProductScreen products={products}/> : <HomeScreen />}
     </div>
   );
 };

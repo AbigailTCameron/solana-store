@@ -7,5 +7,23 @@
     "image_url": "https://i.imgur.com/rVD8bjt.png",
     "filename": "Emojis.zip",
     "hash": "QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5"
+  },
+  {
+    "id": 2,
+    "name": "Green Rainbows",
+    "price": "100",
+    "image_url": "https://i.imgur.com/i5n1Ux3.jpeg",
+    "description": "Rainbow over Baker Tower at Dartmouth College",
+    "filename": "1655830982905.zip",
+    "hash": "QmWqhLC3Kp5DdYqT22myB19AaG2368QW9tMFaPKPDUyP1z"
+  },
+  {
+    "id": 3,
+    "name": "Lady in Red",
+    "price": "0.2",
+    "image_url": "https://i.imgur.com/zektwGX.png",
+    "description": "Woman in red dress dancing",
+    "filename": "dancer_emoji-modifier-fitzpatrick-type-5_1f483-1f3fe_1f3fe.zip",
+    "hash": "QmbWM2CDxS99vAoWCYFfSvb4PfuempDvRPJ4mhWeDWV4Gw"
   }
 ]
